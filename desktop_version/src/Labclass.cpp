@@ -67,7 +67,7 @@ const short* labclass::loadlevel(int rx, int ry)
         283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,405,0,0,0,0,0,0,403,283,283,283,283,283,283,
         };
 
-        obj.createentity(232, 24, 10, 0, 250500);  // (savepoint)
+        obj.createentity(232, 24, 10, 0, 250500, 50, 50);  // (savepoint)
 
         if(game.intimetrial)
         {
@@ -161,7 +161,7 @@ const short* labclass::loadlevel(int rx, int ry)
         };
 
         obj.createentity(96, 124, 11, 120);  // (horizontal gravity line)
-        obj.createentity(248, 48, 10, 0, 251490);  // (savepoint)
+        obj.createentity(248, 48, 10, 0, 251490, 49, 51);  // (savepoint)
         rcol = 4;
 
         roomname = "Rascasse";
@@ -205,7 +205,7 @@ const short* labclass::loadlevel(int rx, int ry)
         286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,
         };
 
-        obj.createentity(248, 136, 10, 1, 252490);  // (savepoint)
+        obj.createentity(248, 136, 10, 1, 252490, 49, 52);  // (savepoint)
         obj.createentity(16, 68, 11, 64);  // (horizontal gravity line)
         obj.createentity(112, 68, 11, 64);  // (horizontal gravity line)
         obj.createentity(64, 164, 11, 64);  // (horizontal gravity line)
@@ -253,7 +253,7 @@ const short* labclass::loadlevel(int rx, int ry)
         289,411,0,0,0,0,0,0,0,0,0,409,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,
         };
 
-        obj.createentity(280, 136, 10, 1, 252480);  // (savepoint)
+        obj.createentity(280, 136, 10, 1, 252480, 48, 52);  // (savepoint)
         obj.createentity(48, 52, 11, 104);  // (horizontal gravity line)
         obj.createentity(192, 52, 11, 104);  // (horizontal gravity line)
         obj.createentity(152, 196, 11, 40);  // (horizontal gravity line)
@@ -301,7 +301,7 @@ const short* labclass::loadlevel(int rx, int ry)
         295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,
         };
 
-        obj.createentity(32, 128, 10, 1, 253480);  // (savepoint)
+        obj.createentity(32, 128, 10, 1, 253480, 48, 53);  // (savepoint)
         obj.createentity(187, 88, 12, 56);  // (vertical gravity line)
         obj.createentity(107, 88, 12, 56);  // (vertical gravity line)
         rcol = 5;
@@ -397,7 +397,7 @@ const short* labclass::loadlevel(int rx, int ry)
         289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,
         };
 
-        obj.createentity(96, 192, 10, 1, 253500);  // (savepoint)
+        obj.createentity(96, 192, 10, 1, 253500, 50, 53);  // (savepoint)
         obj.createentity(163, 32, 12, 168);  // (vertical gravity line)
         rcol = 3;
 
@@ -442,10 +442,10 @@ const short* labclass::loadlevel(int rx, int ry)
         286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,
         };
 
-        obj.createentity(264, 104, 10, 1, 253510);  // (savepoint)
+        obj.createentity(264, 104, 10, 1, 253510, 51, 53);  // (savepoint)
         obj.createentity(131, 120, 12, 96);  // (vertical gravity line)
         obj.createentity(187, 16, 12, 96);  // (vertical gravity line)
-        obj.createentity(40, 112, 10, 0, 253511);  // (savepoint)
+        obj.createentity(40, 112, 10, 0, 253511, 51, 53);  // (savepoint)
         rcol = 2;
         roomname = "They Call Him Flipper";
         result = contents;
@@ -488,7 +488,7 @@ const short* labclass::loadlevel(int rx, int ry)
         292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,
         };
 
-        obj.createentity(24, 184, 10, 1, 253520);  // (savepoint)
+        obj.createentity(24, 184, 10, 1, 253520, 52, 53);  // (savepoint)
         obj.createentity(64, 164, 11, 200);  // (horizontal gravity line)
         rcol = 4;
         roomname = "Three's a Crowd";
@@ -534,8 +534,8 @@ const short* labclass::loadlevel(int rx, int ry)
 
         obj.createentity(195, 24, 12, 80);  // (vertical gravity line)
         obj.createentity(195, 128, 12, 80);  // (vertical gravity line)
-        obj.createentity(80, 120, 10, 0, 252520);  // (savepoint)
-        obj.createentity(80, 96, 10, 1, 252521);  // (savepoint)
+        obj.createentity(80, 120, 10, 0, 252520, 52, 52);  // (savepoint)
+        obj.createentity(80, 96, 10, 1, 252521, 52, 52);  // (savepoint)
         rcol = 2;
         roomname = "Hitting the Apex";
         result = contents;
@@ -579,7 +579,7 @@ const short* labclass::loadlevel(int rx, int ry)
         };
 
         obj.createentity(24, 188, 11, 224);  // (horizontal gravity line)
-        obj.createentity(280, 96, 10, 1, 252510);  // (savepoint)
+        obj.createentity(280, 96, 10, 1, 252510, 51, 52);  // (savepoint)
 
         obj.createentity(204, 32, 20, 0);  // (terminal)
         obj.createblock(5, 204-8, 32, 20, 16, 20);
@@ -674,7 +674,7 @@ const short* labclass::loadlevel(int rx, int ry)
         obj.createentity(32, 28, 11, 296);  // (horizontal gravity line)
         obj.createentity(32, 196, 11, 112);  // (horizontal gravity line)
         obj.createentity(128, 100, 11, 160);  // (horizontal gravity line)
-        obj.createentity(88, 112, 10, 0, 250510);  // (savepoint)
+        obj.createentity(88, 112, 10, 0, 250510, 51, 50);  // (savepoint)
         roomname = "Brought to you by the letter G";
         rcol = 1;
         result = contents;
@@ -718,7 +718,7 @@ const short* labclass::loadlevel(int rx, int ry)
         };
 
         obj.createentity(-8, 28, 11, 336);  // (horizontal gravity line)
-        obj.createentity(32, 72, 10, 1, 250520);  // (savepoint)
+        obj.createentity(32, 72, 10, 1, 250520, 52, 50);  // (savepoint)
         rcol=2;
 
         roomname = "Free Your Mind";
@@ -1032,7 +1032,7 @@ const short* labclass::loadlevel(int rx, int ry)
         };
 
 
-        obj.createentity(160, 176, 10, 0, 249550);  // (savepoint)
+        obj.createentity(160, 176, 10, 0, 249550, 55, 49);  // (savepoint)
         obj.createentity(224, 68, 11, 72);  // (horizontal gravity line)
 
 
@@ -1132,7 +1132,7 @@ const short* labclass::loadlevel(int rx, int ry)
         };
 
         obj.createentity(32, 64, 9, 10);  // (shiny trinket)
-        obj.createentity(120, 72, 10, 1, 252550);  // (savepoint)
+        obj.createentity(120, 72, 10, 1, 252550, 55, 52);  // (savepoint)
         rcol = 4;
 
         roomname = "The Tantalizing Trinket";
@@ -1176,7 +1176,7 @@ const short* labclass::loadlevel(int rx, int ry)
         283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,405,53,0,0,0,0,0,0,0,54,403,283,405,0,0,0,0,0,0,403,283,283,283,
         };
 
-        obj.createentity(272, 144, 10, 1, 253550);  // (savepoint)
+        obj.createentity(272, 144, 10, 1, 253550, 55, 53);  // (savepoint)
         obj.createentity(152, 116, 11, 56);  // (horizontal gravity line)
         obj.createentity(139, 16, 12, 72);  // (vertical gravity line)
         obj.createentity(139, 144, 12, 72);  // (vertical gravity line)
@@ -1223,7 +1223,7 @@ const short* labclass::loadlevel(int rx, int ry)
         295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,
         };
 
-        obj.createentity(216, 144, 10, 1, 254550);  // (savepoint)
+        obj.createentity(216, 144, 10, 1, 254550, 55, 54);  // (savepoint)
         obj.createentity(-8, 60, 11, 136);  // (horizontal gravity line)
         obj.createentity(-8, 172, 11, 136);  // (horizontal gravity line)
         rcol = 5;
@@ -1317,8 +1317,8 @@ const short* labclass::loadlevel(int rx, int ry)
 
         obj.createentity(-8, 60, 11, 120);  // (horizontal gravity line)
         obj.createentity(-8, 172, 11, 40);  // (horizontal gravity line)
-        obj.createentity(264, 72, 10, 0, 254530);  // (savepoint)
-        obj.createentity(40, 144, 10, 1, 254531);  // (savepoint)
+        obj.createentity(264, 72, 10, 0, 254530, 53, 54);  // (savepoint)
+        obj.createentity(40, 144, 10, 1, 254531, 53, 54);  // (savepoint)
         obj.createentity(160, 60, 11, 48);  // (horizontal gravity line)
         obj.createentity(288, 60, 11, 40);  // (horizontal gravity line)
         obj.createentity(112, 172, 11, 48);  // (horizontal gravity line)
@@ -1420,7 +1420,7 @@ const short* labclass::loadlevel(int rx, int ry)
         obj.createentity(176, 172, 11, 152);  // (horizontal gravity line)
         obj.createentity(-8, 84, 11, 160);  // (horizontal gravity line)
         obj.createentity(-8, 148, 11, 160);  // (horizontal gravity line)
-        obj.createentity(160-4, 120, 10, 1, 254510);  // (savepoint)
+        obj.createentity(160-4, 120, 10, 1, 254510, 51 ,54);  // (savepoint)
         rcol=1;
 
         obj.fatal_top();
@@ -1516,7 +1516,7 @@ const short* labclass::loadlevel(int rx, int ry)
         };
 
         obj.createentity(264, 84, 11, 64);  // (horizontal gravity line)
-        obj.createentity(240+4, 96, 10, 0, 254490);  // (savepoint)
+        obj.createentity(240+4, 96, 10, 0, 254490, 49, 54);  // (savepoint)
         obj.createentity(48, 28, 11, 192);  // (horizontal gravity line)
         obj.createentity(120, 148, 11, 208);  // (horizontal gravity line)
         rcol=2;
@@ -1564,7 +1564,7 @@ const short* labclass::loadlevel(int rx, int ry)
         };
 
         obj.createentity(48, 156, 11, 200);  // (horizontal gravity line)
-        obj.createentity(216, 56, 10, 0, 255490);  // (savepoint)
+        obj.createentity(216, 56, 10, 0, 255490, 49, 55);  // (savepoint)
         rcol=4;
 
         roomname = "Please Forgive Me!";
@@ -1665,7 +1665,7 @@ const short* labclass::loadlevel(int rx, int ry)
         obj.createentity(187, 48, 12, 88);  // (vertical gravity line)
         obj.createentity(235, 48, 12, 48);  // (vertical gravity line)
         obj.createentity(283, 48, 12, 152);  // (vertical gravity line)
-        obj.createentity(8, 48, 10, 0, 255510);  // (savepoint)
+        obj.createentity(8, 48, 10, 0, 255510, 51, 55);  // (savepoint)
         rcol=5;
 
         roomname = "A Difficult Chord";
@@ -1709,7 +1709,7 @@ const short* labclass::loadlevel(int rx, int ry)
         280,280,280,280,280,280,280,280,280,280,280,280,280,280,280,280,402,51,0,0,0,0,0,52,400,280,280,280,280,280,280,280,280,280,280,280,280,280,280,280,
         };
 
-        obj.createentity(16, 184, 10, 1, 255520);  // (savepoint)
+        obj.createentity(16, 184, 10, 1, 255520, 52, 55);  // (savepoint)
         obj.createentity(131, 88, 12, 96);  // (vertical gravity line)
         obj.createentity(208, 180, 11, 40);  // (horizontal gravity line)
         obj.createentity(67, 56, 12, 80);  // (vertical gravity line)
@@ -1846,8 +1846,8 @@ const short* labclass::loadlevel(int rx, int ry)
         obj.createentity(16, 24, 9,  9);  // (shiny trinket)
         obj.createentity(187, 24, 12, 64);  // (vertical gravity line)
         obj.createentity(104, 124, 11, 80);  // (horizontal gravity line)
-        obj.createentity(48, 72, 10, 1, 252500);  // (savepoint)
-        obj.createentity(224, 72, 10, 1, 252501);  // (savepoint)
+        obj.createentity(48, 72, 10, 1, 252500, 50, 52);  // (savepoint)
+        obj.createentity(224, 72, 10, 1, 252501, 50, 52);  // (savepoint)
         obj.createentity(99, 24, 12, 80);  // (vertical gravity line)
         rcol=0;
 
@@ -1980,7 +1980,7 @@ const short* labclass::loadlevel(int rx, int ry)
         295,295,295,295,295,417,0,415,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,295,
         };
 
-        obj.createentity(112, 184, 10, 1, 258520);  // (savepoint)
+        obj.createentity(112, 184, 10, 1, 258520, 52, 58);  // (savepoint)
         rcol = 5;
 
         roomname = "I Smell Ozone";

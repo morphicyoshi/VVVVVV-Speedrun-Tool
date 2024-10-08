@@ -8,6 +8,22 @@ VVVVVV is still commerically available at [thelettervsixtim.es](https://thelette
 
 Discussion about VVVVVV updates mainly happens on the "unofficial" [VVVVVV discord](https://discord.gg/Zf7Nzea), in the `vvvvvv-code` channel.
 
+Speedrun Tool
+-------
+**Features**
+- Lock Checkpoints, prevents checkpoints from being activated in time trial
+- Checkpoint Switcher, switch between checkpoints in a time trial (doesn't work in The Tower)
+- Quick Restart, time trials restart much faster
+  
+**Hotkeys**
+- Press `k` to lock checkpoints when in a time trial
+- Press `l` to move forward checkpoints when in a time trial
+- Press `j` to move backward checkpoints when in a time trial
+
+**Known Issues**
+- Using the checkpoint switcher in The Final Level can be buggy after the terminal activation
+- Using the checkpoint switcher on conveyers sometimes teleports you upwards
+  
 Credits
 -------
 - Created by [Terry Cavanagh](http://distractionware.com/)

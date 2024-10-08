@@ -58,7 +58,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
         };
 
-        obj.createentity(96, 40, 10, 0, 450500);  // (savepoint)
+        obj.createentity(96, 40, 10, 0, 450500, 50, 50);  // (savepoint)
         if(game.intimetrial)
         {
             obj.createentity(136, 92, 11, 48);  // (horizontal gravity line)
@@ -147,7 +147,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         107,107,107,107,107,107,229,689,689,689,689,227,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,
         };
 
-        obj.createentity(128, 176, 10, 1, 449490);  // (savepoint)
+        obj.createentity(128, 176, 10, 1, 449490, 49, 49);  // (savepoint)
         obj.createentity(160, 192, 3);  //Disappearing Platform
         obj.createentity(192, 192, 3);  //Disappearing Platform
         obj.createentity(224, 192, 3);  //Disappearing Platform
@@ -246,7 +246,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(88, 72, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(216, 72, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(280, 72, 2, 10, 4);  //Big Threadmill, >>>>>>
-        obj.createentity(64, 32, 10, 0, 447490);  // (savepoint)
+        obj.createentity(64, 32, 10, 0, 447490, 49, 47);  // (savepoint)
         obj.createentity(288, 160, 2, 8, 4);  //Threadmill, >>>
         obj.createentity(280, 112, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(160, 216, 2, 10, 4);  //Big Threadmill, >>>>>>
@@ -256,7 +256,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(184, 168, 2, 8, 4);  //Threadmill, >>>
         obj.createentity(216, 112, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(152, 72, 2, 10, 4);  //Big Threadmill, >>>>>>
-        obj.createentity(224, 120, 10, 0, 447491);  // (savepoint)
+        obj.createentity(224, 120, 10, 0, 447491, 49, 47);  // (savepoint)
 
         roomname = "Conveying a New Idea";
         result = contents;
@@ -365,7 +365,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(160, 96, 2, 0, 4, 64, 72, 256, 160);  // Platform, bounded
         obj.createentity(192, 104, 2, 0, 4, 64, 72, 256, 160);  // Platform, bounded
         obj.createentity(224, 112, 2, 0, 4, 64, 72, 256, 160);  // Platform, bounded
-        obj.createentity(264, 96, 10, 1, 448500);  // (savepoint)
+        obj.createentity(264, 96, 10, 1, 448500, 50, 48);  // (savepoint)
         roomname = "The High Road is Low";
         result = contents;
         break;
@@ -408,8 +408,8 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         };
 
         obj.createentity(144, 200, 3, 51);  //Disappearing Platform
-        obj.createentity(24, 16, 10, 0, 449500);  // (savepoint)
-        obj.createentity(280, 16, 10, 0, 449501);  // (savepoint)
+        obj.createentity(24, 16, 10, 0, 449500, 50, 49);  // (savepoint)
+        obj.createentity(280, 16, 10, 0, 449501, 50, 49);  // (savepoint)
         obj.createentity(0, 8, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(64, 8, 2, 8, 4);  //Threadmill, >>>
         obj.createentity(224, 8, 2, 11, 4);  //Big Threadmill, <<<<<<
@@ -461,8 +461,8 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(128, 104, 2, 11, 4);  //Big Threadmill, <<<<<<
         obj.createentity(192, 104, 2, 11, 4);  //Big Threadmill, <<<<<<
         obj.createentity(256, 104, 2, 11, 4);  //Big Threadmill, <<<<<<
-        obj.createentity(152, 88, 10, 1, 449510);  // (savepoint)
-        obj.createentity(152, 120, 10, 0, 449511);  // (savepoint)
+        obj.createentity(152, 88, 10, 1, 449510, 51, 49);  // (savepoint)
+        obj.createentity(152, 120, 10, 0, 449511, 51, 49);  // (savepoint)
         obj.createentity(128, 112, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(192, 112, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(256, 112, 2, 10, 4);  //Big Threadmill, >>>>>>
@@ -570,7 +570,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(64, 104, 2, 11, 4);  //Big Threadmill, <<<<<<
         obj.createentity(192, 104, 2, 11, 4);  //Big Threadmill, <<<<<<
         obj.createentity(256, 104, 2, 11, 4);  //Big Threadmill, <<<<<<
-        obj.createentity(152, 120, 10, 0, 449530);  // (savepoint)
+        obj.createentity(152, 120, 10, 0, 449530, 53, 49);  // (savepoint)
         obj.createentity(0, 112, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(64, 112, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(128, 112, 2, 10, 4);  //Big Threadmill, >>>>>>
@@ -669,14 +669,14 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         };
 
         obj.platformtile = 10;
-        obj.createentity(264, 128, 10, 0, 448540);  // (savepoint)
+        obj.createentity(264, 128, 10, 0, 448540, 54, 48);  // (savepoint)
         obj.createentity(192, 32, 3, 10);  //Disappearing Platform
         obj.createentity(32, 176, 2, 3, 4);  // Platform
         obj.createentity(256, 120, 2, 8, 4);  //Threadmill, >>>
         obj.createentity(224, 184, 2, 8, 4);  //Threadmill, >>>
         obj.createentity(0, 16, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(64, 16, 2, 8, 4);  //Threadmill, >>>
-        obj.createentity(104, 24, 10, 0, 448541);  // (savepoint)
+        obj.createentity(104, 24, 10, 0, 448541, 54, 48);  // (savepoint)
         roomname = "Ha Ha Ha Not Really";
         result = contents;
         break;
@@ -728,7 +728,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(96, 32, 2, 3, 4);  // Platform
         obj.createentity(240, 88, 2, 2, 4);  // Platform
         obj.createentity(128, 184, 2, 10, 4);  //Big Threadmill, >>>>>>
-        obj.createentity(152, 168, 10, 1, 448530);  // (savepoint)
+        obj.createentity(152, 168, 10, 1, 448530, 53, 48);  // (savepoint)
         obj.createentity(72, 128, 2, 11, 4);  //Big Threadmill, <<<<<<
         obj.createentity(184, 128, 2, 11, 4);  //Big Threadmill, <<<<<<
         obj.createentity(48, 104, 2, 10, 4);  //Big Threadmill, >>>>>>
@@ -781,10 +781,10 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(0, 104, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(120, 104, 2, 0, 4, 96, 64, 224, 160);  // Platform, bounded
         obj.createentity(168, 80, 2, 0, 4, 96, 64, 224, 160);  // Platform, bounded
-        obj.createentity(72, 64, 10, 1, 448520);  // (savepoint)
-        obj.createentity(232, 64, 10, 1, 448521);  // (savepoint)
-        obj.createentity(232, 144, 10, 0, 448522);  // (savepoint)
-        obj.createentity(72, 144, 10, 0, 448523);  // (savepoint)
+        obj.createentity(72, 64, 10, 1, 448520, 52, 48);  // (savepoint)
+        obj.createentity(232, 64, 10, 1, 448521, 52, 48);  // (savepoint)
+        obj.createentity(232, 144, 10, 0, 448522, 52, 48);  // (savepoint)
+        obj.createentity(72, 144, 10, 0, 448523, 52, 48);  // (savepoint)
         roomname = "Gordian Knot";
         result = contents;
         break;
@@ -837,7 +837,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(96, 40, 2, 11, 4);  //Big Threadmill, <<<<<<
         obj.createentity(160, 40, 2, 11, 4);  //Big Threadmill, <<<<<<
         obj.createentity(32, 40, 2, 9, 4);  //Threadmill, <<<
-        obj.createentity(72, 80, 10, 1, 448510);  // (savepoint)
+        obj.createentity(72, 80, 10, 1, 448510, 51, 48);  // (savepoint)
         obj.createentity(104, 128, 1, 0, 5, 104, 120, 288, 200);  // Enemy, bounded
         obj.createentity(160+8, 168, 1, 1, 5, 104, 120, 288, 200);  // Enemy, bounded
         obj.createentity(216+16, 128, 1, 0, 5, 104, 120, 288, 200);  // Enemy, bounded
@@ -883,7 +883,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         283,283,283,283,283,283,283,405,0,0,0,0,403,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,283,
         };
 
-        obj.createentity(72, 184, 10, 0, 447510);  // (savepoint)
+        obj.createentity(72, 184, 10, 0, 447510, 51, 47);  // (savepoint)
         obj.createentity(80, 128, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(144, 128, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(208, 128, 2, 10, 4);  //Big Threadmill, >>>>>>
@@ -936,9 +936,9 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,
         };
 
-        obj.createentity(8, 200, 10, 1, 447520);  // (savepoint)
+        obj.createentity(8, 200, 10, 1, 447520, 52, 47);  // (savepoint)
         obj.createentity(200, 192, 9, 4);  // (shiny trinket)
-        obj.createentity(232, 96, 10, 1, 447521);  // (savepoint)
+        obj.createentity(232, 96, 10, 1, 447521, 52, 47);  // (savepoint)
 
         obj.createentity(24 - 60 - 8, 144 - 8, 1, 10, 0);  // Enemy
 
@@ -987,7 +987,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,232,0,0,0,0,230,110,110,110,110,110,110,110,110,110,110,110,110,110,110,
         };
 
-        obj.createentity(176, 104, 10, 0, 446510);  // (savepoint)
+        obj.createentity(176, 104, 10, 0, 446510, 51, 46);  // (savepoint)
 
         obj.createentity(7 * 8, 17 * 8, 1, 12, 0);  // Enemy
 
@@ -1034,7 +1034,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         92,92,92,92,92,92,214,683,683,683,683,683,212,92,92,92,92,92,92,92,92,92,92,92,92,92,92,92,92,92,92,92,92,92,92,92,92,92,92,92,
         };
 
-        obj.createentity(96, 168, 10, 0, 445510);  // (savepoint)
+        obj.createentity(96, 168, 10, 0, 445510, 51, 45);  // (savepoint)
 
         obj.createentity(7 * 8, 36 * 8, 1, 12, 0);  // Enemy
 
@@ -1084,7 +1084,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         292,292,292,292,292,292,414,701,701,701,701,701,412,292,292,292,292,292,292,292,414,0,0,0,0,412,292,292,292,292,292,292,292,292,292,292,292,292,292,292,
         };
 
-        obj.createentity(224, 200, 10, 1, 444510);  // (savepoint)
+        obj.createentity(224, 200, 10, 1, 444510, 51, 44);  // (savepoint)
 
         obj.createentity(56, 40, 1, 0, 2);  // Enemy //collector
 
@@ -1228,7 +1228,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,411,0,0,0,0,409,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,
         };
 
-        obj.createentity(152, 120, 10, 0, 445530);  // (savepoint)
+        obj.createentity(152, 120, 10, 0, 445530, 53, 45);  // (savepoint)
         roomname = "doomS";
         result = contents;
         break;
@@ -1318,7 +1318,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
         };
 
-        obj.createentity(152, 96, 10, 1, 446530);  // (savepoint)
+        obj.createentity(152, 96, 10, 1, 446530, 53, 46);  // (savepoint)
         roomname = "Swoop";
         result = contents;
         break;
@@ -1360,7 +1360,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,229,0,0,0,0,227,229,0,0,0,0,0,0,
         };
 
-        obj.createentity(64, 40, 10, 1, 446520);  // (savepoint)
+        obj.createentity(64, 40, 10, 1, 446520, 52, 46);  // (savepoint)
         obj.createentity(208, 88, 3, 827);  //Disappearing Platform
         obj.createentity(152, 160, 3, 827);  //Disappearing Platform
         obj.createentity(96, 88, 3, 827);  //Disappearing Platform
@@ -1455,7 +1455,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(96, 160, 2, 9, 4);  //Threadmill, <<<
         obj.createentity(160, 160, 2, 11, 4);  //Big Threadmill, <<<<<<
         obj.createentity(208, 160, 2, 9, 4);  //Threadmill, <<<
-        obj.createentity(248, 184, 10, 1, 445540);  // (savepoint)
+        obj.createentity(248, 184, 10, 1, 445540, 54, 45);  // (savepoint)
         obj.createentity(184, 24, 2, 9, 4);  //Threadmill, <<<
         obj.createentity(64, 64, 2, 11, 4);  //Big Threadmill, <<<<<<
         obj.createentity(152, 64, 2, 9, 4);  //Threadmill, <<<
@@ -1564,7 +1564,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,
         };
 
-        obj.createentity(96, 80, 10, 1, 447540);  // (savepoint)
+        obj.createentity(96, 80, 10, 1, 447540, 54, 47);  // (savepoint)
         obj.createentity(64, 184, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(112, 184, 2, 8, 4);  //Threadmill, >>>
         obj.createentity(176, 184, 2, 10, 4);  //Big Threadmill, >>>>>>
@@ -1574,7 +1574,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(288, 184, 2, 8, 4);  //Threadmill, >>>
         obj.createentity(120, 112, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(168, 112, 2, 8, 4);  //Threadmill, >>>
-        obj.createentity(208, 168, 10, 1, 447541);  // (savepoint)
+        obj.createentity(208, 168, 10, 1, 447541, 54, 47);  // (savepoint)
 
         obj.createentity(24 - 60 - 8, 144 - 8, 1, 10, 0);  // Enemy
 
@@ -1624,7 +1624,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
         };
 
-        obj.createentity(64, 152, 10, 1, 446540);  // (savepoint)
+        obj.createentity(64, 152, 10, 1, 446540, 54, 46);  // (savepoint)
         obj.createentity(120, 72, 3, 707);  //Disappearing Platform
         obj.createentity(248, 72, 3, 707);  //Disappearing Platform
         obj.createentity(184, 200, 3, 707);  //Disappearing Platform
@@ -1675,7 +1675,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(0, 184, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(128, 184, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(184, 184, 2, 10, 4);  //Big Threadmill, >>>>>>
-        obj.createentity(152, 168, 10, 1, 447550);  // (savepoint)
+        obj.createentity(152, 168, 10, 1, 447550, 55, 47);  // (savepoint)
 
         obj.createentity(264, 136, 1, 0, 2);  // Enemy //Collector
         obj.createentity(24 - 60 - 8, 144 - 8, 1, 10, 0);  // Enemy
@@ -1767,8 +1767,8 @@ const short* spacestation2class::loadlevel(int rx, int ry)
 
         obj.platformtile = 159;
         obj.createentity(24, 80, 2, 3, 6);  // Platform
-        obj.createentity(64, 176, 10, 0, 445550);  // (savepoint)
-        obj.createentity(216 - 4, 192, 10, 1, 445551);  // (savepoint)
+        obj.createentity(64, 176, 10, 0, 445550, 55, 45);  // (savepoint)
+        obj.createentity(216 - 4, 192, 10, 1, 445551, 55, 45);  // (savepoint)
         roomname = "Just Pick Yourself Down";
         result = contents;
         break;
@@ -1811,7 +1811,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,408,0,0,0,0,406,286,
         };
 
-        obj.createentity(32, 40, 10, 1, 444560);  // (savepoint)
+        obj.createentity(32, 40, 10, 1, 444560, 55, 44);  // (savepoint)
         obj.createentity(56, 24, 10, 0, 444551);  // (savepoint)
         obj.createentity(80, 40, 10, 1, 444552);  // (savepoint)
         obj.createentity(104, 24, 10, 0, 444553);  // (savepoint)
@@ -1821,7 +1821,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(200, 24, 10, 0, 444557);  // (savepoint)
         obj.createentity(224, 40, 10, 1, 444558);  // (savepoint)
         obj.createentity(248, 24, 10, 0, 444559);  // (savepoint)
-        obj.createentity(272, 40, 10, 1, 444550);  // (savepoint)
+        obj.createentity(272, 40, 10, 1, 444550, 55, 44);  // (savepoint)
         obj.createentity(0, 16, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(64, 16, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(128, 16, 2, 10, 4);  //Big Threadmill, >>>>>>
@@ -1887,7 +1887,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(176, 80, 3, 55);  //Disappearing Platform
         obj.createentity(0, 56, 2, 8, 4);  //Threadmill, >>>
         obj.createentity(16, 56, 2, 8, 4);  //Threadmill, >>>
-        obj.createentity(72, 72, 10, 1, 444561);  // (savepoint)
+        obj.createentity(72, 72, 10, 1, 444561, 56, 44);  // (savepoint)
         obj.createentity(8, 144, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(48, 144, 2, 8, 4);  //Threadmill, >>>
         obj.createentity(0, 16, 2, 10, 4);  //Big Threadmill, >>>>>>
@@ -2140,7 +2140,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         };
 
         obj.createentity(224, 144, 9, 5);  // (shiny trinket)
-        obj.createentity(96, 152, 10, 1, 450560);  // (savepoint)
+        obj.createentity(96, 152, 10, 1, 450560, 56, 50);  // (savepoint)
 
         obj.createentity(24, 152, 20, 1);  // (terminal)
         obj.createblock(5, 24-4, 152, 20, 16, 16);
@@ -2238,7 +2238,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
 
         obj.createentity(0, 168, 2, 11, 4);  //Big Threadmill, <<<<<<
         obj.createentity(64, 168, 2, 9, 4);  //Threadmill, <<<
-        obj.createentity(72, 128, 10, 1, 443560);  // (savepoint)
+        obj.createentity(72, 128, 10, 1, 443560, 56, 43);  // (savepoint)
 
         obj.createentity((21 * 8), (9 * 8), 14); //Teleporter!
 
@@ -2358,9 +2358,9 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(128, 168, 2, 11, 4);  //Big Threadmill, <<<<<<
         obj.createentity(192, 168, 2, 11, 4);  //Big Threadmill, <<<<<<
         obj.createentity(256, 168, 2, 11, 4);  //Big Threadmill, <<<<<<
-        obj.createentity(32+4, 48, 10, 0, 443540);  // (savepoint)
+        obj.createentity(32+4, 48, 10, 0, 443540, 54, 43);  // (savepoint)
         obj.createentity(208-4, 48, 1, 0, 3, 104, 40, 324, 136);  // Enemy, bounded
-        obj.createentity(136 + 4, 96, 10, 1, 443541);  // (savepoint)
+        obj.createentity(136 + 4, 96, 10, 1, 443541, 54, 43);  // (savepoint)
 
         roomname = "The Tomb of Mad Carew";
         result = contents;
@@ -2403,8 +2403,8 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         310,310,310,310,432,0,0,0,0,0,812,692,430,310,310,310,310,310,310,310,310,310,310,310,310,310,310,310,432,0,0,0,0,0,0,430,310,310,310,310,
         };
 
-        obj.createentity(56, 144, 10, 0, 443520);  // (savepoint)
-        obj.createentity(152, 80, 10, 1, 443521);  // (savepoint)
+        obj.createentity(56, 144, 10, 0, 443520, 52, 43);  // (savepoint)
+        obj.createentity(152, 80, 10, 1, 443521, 52, 43);  // (savepoint)
         roomname = "The Sensible Room";
         result = contents;
         break;
@@ -2489,8 +2489,8 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,
         };
 
-        obj.createentity(280, 192, 10, 1, 443500);  // (savepoint)
-        obj.createentity(64, 80, 10, 1, 443501);  // (savepoint)
+        obj.createentity(280, 192, 10, 1, 443500, 50, 43);  // (savepoint)
+        obj.createentity(64, 80, 10, 1, 443501, 50, 43);  // (savepoint)
 
         if(!game.nocutscenes)
         {
@@ -2552,7 +2552,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(120, 128, 3, 747);  //Disappearing Platform
         obj.createentity(88, 72, 2, 15, 4);  // Platform
         obj.createentity(192, 128, 9, 6);  // (shiny trinket)
-        obj.createentity(240, 136, 10, 0, 443490);  // (savepoint)
+        obj.createentity(240, 136, 10, 0, 443490, 49, 43);  // (savepoint)
         roomname = "Prize for the Reckless";
         if(game.nodeathmode)
         {
@@ -2604,8 +2604,8 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,
         };
 
-        obj.createentity(152, 32, 10, 1, 443480);  // (savepoint)
-        obj.createentity(152, 184, 10, 0, 443481);  // (savepoint)
+        obj.createentity(152, 32, 10, 1, 443480, 48, 43);  // (savepoint)
+        obj.createentity(152, 184, 10, 0, 443481, 48, 43);  // (savepoint)
         obj.createentity(272, 120, 1, 2, 8);  // Enemy
         obj.createentity(32, 96, 1, 3, 8);  // Enemy
         obj.createentity(104, 80, 2, 10, 4);  //Big Threadmill, >>>>>>
@@ -2660,8 +2660,8 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(136, 112, 2, 1, 4, 88, 64, 264, 168);  // Platform, bounded
         obj.createentity(184, 112, 2, 0, 4, 88, 64, 264, 168);  // Platform, bounded
         obj.createentity(232, 112, 2, 1, 4, 88, 64, 264, 168);  // Platform, bounded
-        obj.createentity(56, 64, 10, 0, 442480);  // (savepoint)
-        obj.createentity(280, 152, 10, 1, 442481);  // (savepoint)
+        obj.createentity(56, 64, 10, 0, 442480, 48, 42);  // (savepoint)
+        obj.createentity(280, 152, 10, 1, 442481, 48, 42);  // (savepoint)
 
         roomname = "Down Under";
         result = contents;
@@ -2706,8 +2706,8 @@ const short* spacestation2class::loadlevel(int rx, int ry)
 
         obj.createentity(16, 104, 2, 10, 4);  //Big Threadmill, >>>>>>
         obj.createentity(104, 184, 2, 11, 4);  //Big Threadmill, <<<<<<
-        obj.createentity(144, 168, 10, 1, 442490);  // (savepoint)
-        obj.createentity(24, 112, 10, 0, 442491);  // (savepoint)
+        obj.createentity(144, 168, 10, 1, 442490, 49, 42);  // (savepoint)
+        obj.createentity(24, 112, 10, 0, 442491, 49, 42);  // (savepoint)
         roomname = "Shenanigan";
         result = contents;
         break;
@@ -2749,7 +2749,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,611,0,0,0,809,689,689,609,489,489,489,489,489,
         };
 
-        obj.createentity(192, 88, 10, 0, 441490);  // (savepoint)
+        obj.createentity(192, 88, 10, 0, 441490, 49, 41);  // (savepoint)
 
         if(!game.intimetrial || game.translator_exploring)
         {
@@ -2847,8 +2847,8 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,414,0,0,0,0,412,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,292,
         };
 
-        obj.createentity(40, 24, 10, 0, 442530);  // (savepoint)
-        obj.createentity(264, 24, 10, 0, 442531);  // (savepoint)
+        obj.createentity(40, 24, 10, 0, 442530, 53, 42);  // (savepoint)
+        obj.createentity(264, 24, 10, 0, 442531, 53, 42);  // (savepoint)
 
         roomname = "Driller";
         result = contents;
@@ -3002,7 +3002,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         495,495,495,495,495,617,0,0,0,0,0,0,615,495,495,495,495,495,495,495,495,495,495,495,495,495,495,495,495,495,495,495,495,495,495,495,495,495,495,495,
         };
 
-        obj.createentity(288, 160, 10, 1, 442500);  // (savepoint)
+        obj.createentity(288, 160, 10, 1, 442500, 50, 42);  // (savepoint)
 
 
         obj.createentity(135, 75, 2, 0, 3, 100, 70, 320, 160);
@@ -3108,8 +3108,8 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(192+2, 176-4, 1, 1, 3);  // Enemy
         obj.createentity(192+2, 40, 1, 0, 3);  // Enemy
 
-        obj.createentity(64, 80, 10, 1, 441501);  // (savepoint)
-        obj.createentity(64, 136, 10, 0, 441502);  // (savepoint)
+        obj.createentity(64, 80, 10, 1, 441501, 50, 41);  // (savepoint)
+        obj.createentity(64, 136, 10, 0, 441502, 50, 41);  // (savepoint)
 
         roomname = "The Yes Men";
         result = contents;
@@ -3156,9 +3156,9 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(136-32, 64, 3, 10);  //Disappearing Platform
         obj.createentity(136, 64, 3, 10);  //Disappearing Platform
         obj.createentity(136+32, 64, 3, 10);  //Disappearing Platform
-        obj.createentity(56, 104, 10, 1, 440500);  // (savepoint)
+        obj.createentity(56, 104, 10, 1, 440500, 50, 40);  // (savepoint)
         obj.createentity(56, 152, 2, 3, 3);  // Platform
-        obj.createentity(280, 192, 10, 1, 440501);  // (savepoint)
+        obj.createentity(280, 192, 10, 1, 440501, 50, 40);  // (savepoint)
 
         roomname = "Gantry and Dolly";
         result = contents;
@@ -3202,7 +3202,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         };
 
         obj.createentity(88, 104, 21, 1);  // (savepoint)
-        obj.createentity(112, 104, 21, 1, 440511);  // (savepoint)
+        obj.createentity(112, 104, 21, 1, 440511, 51, 40);  // (savepoint)
         obj.createentity(136, 88, 1, 0, 0);  // Enemy //the radar dish
         //obj.createentity(176, 104, 10, 1, 440512);  // (savepoint)
         obj.createentity(200, 104, 21, 1);  // (savepoint)
@@ -3256,7 +3256,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         };
 
         obj.createentity(200, 32, 1, 0, 8);  // Enemy
-        obj.createentity(168, 104, 10, 1, 439500);  // (savepoint)
+        obj.createentity(168, 104, 10, 1, 439500, 50, 39);  // (savepoint)
 
         roomname = "Security Sweep";
         result = contents;
@@ -3299,8 +3299,8 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,95,
         };
 
-        obj.createentity(24, 168, 10, 1, 439510);  // (savepoint)
-        obj.createentity(280, 48, 10, 0, 439511);  // (savepoint)
+        obj.createentity(24, 168, 10, 1, 439510, 51, 39);  // (savepoint)
+        obj.createentity(280, 48, 10, 0, 439511, 51, 39);  // (savepoint)
         obj.createentity(80, 88, 1, 3, 3);  // Enemy
         obj.createentity(224 - 16, 128, 1, 2, 3);  // Enemy
 
@@ -3347,8 +3347,8 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,289,411,0,0,0,0,409,289,289,289,289,289,289,289,289,289,
         };
 
-        obj.createentity(192, 48, 10, 0, 439520);  // (savepoint)
-        obj.createentity(112, 160, 10, 1, 439521);  // (savepoint)
+        obj.createentity(192, 48, 10, 0, 439520, 52, 39);  // (savepoint)
+        obj.createentity(112, 160, 10, 1, 439521, 52, 39);  // (savepoint)
         roomname = "Atmospheric Filtering Unit";
         result = contents;
         break;
@@ -3396,7 +3396,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         obj.createentity(205, 118, 1, 1, 4);
         obj.createentity(125, 18, 1, 0, 4);
 
-        obj.createentity(232, 184, 10, 0, 1);
+        obj.createentity(232, 184, 10, 0, 1, 53, 39);
         result = contents;
         break;
     }
@@ -3477,7 +3477,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,286,
         };
 
-        obj.createentity(152, 168, 10, 1, 441530);  // (savepoint)
+        obj.createentity(152, 168, 10, 1, 441530, 53, 41);  // (savepoint)
 
         if(!game.nocutscenes)
         {
@@ -3613,7 +3613,7 @@ const short* spacestation2class::loadlevel(int rx, int ry)
         89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,
         };
 
-        obj.createentity(216, 144, 10, 1, 440520);  // (savepoint)
+        obj.createentity(216, 144, 10, 1, 440520, 52, 40);  // (savepoint)
         obj.createentity(16, 136, 9, 0);  // (shiny trinket)
 
         roomname = "It's a Secret to Nobody";

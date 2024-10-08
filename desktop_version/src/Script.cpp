@@ -2664,7 +2664,8 @@ void scriptclass::startgamemode(const enum StartMode mode)
 
         game.nocutscenes = true;
         game.intimetrial = true;
-        game.timetrialcountdown = 150;
+        game.timetrialcountdown = 40;
+        game.checkpointcount = -1;
         game.timetriallevel = mode - Start_FIRST_TIMETRIAL;
 
         if (map.invincibility)
@@ -2677,22 +2678,39 @@ void scriptclass::startgamemode(const enum StartMode mode)
         case Start_TIMETRIAL_SPACESTATION1:
             game.timetrialpar = 75;
             game.timetrialshinytarget = 2;
+            obj.checkpoints = obj.ss1;
+            game.offsetx = (50 + 12);
+            game.offsety = (50 + 14);
+            game.offsety2 = game.offsety;
             break;
         case Start_TIMETRIAL_LABORATORY:
             game.timetrialpar = 165;
             game.timetrialshinytarget = 4;
+            obj.checkpoints = obj.lab;
+            game.offsetx = (50 + 2);
+            game.offsety = 46;
+            game.offsety2 = (50 + 16);
             break;
         case Start_TIMETRIAL_TOWER:
             game.timetrialpar = 105;
             game.timetrialshinytarget = 2;
+            obj.checkpoints = obj.tower;
             break;
         case Start_TIMETRIAL_SPACESTATION2:
             game.timetrialpar = 200;
             game.timetrialshinytarget = 5;
+            obj.checkpoints = obj.ss2;
+            game.offsetx = (50 + 12);
+            game.offsety = (50 + 14);
+            game.offsety2 = game.offsety;
             break;
         case Start_TIMETRIAL_WARPZONE:
             game.timetrialpar = 120;
             game.timetrialshinytarget = 1;
+            obj.checkpoints = obj.warp;
+            game.offsetx = (50 + 14);
+            game.offsety = (51);
+            game.offsety2 = game.offsety;
             break;
         case Start_TIMETRIAL_FINALLEVEL:
             game.timetrialpar = 135;
@@ -2701,6 +2719,10 @@ void scriptclass::startgamemode(const enum StartMode mode)
             map.final_colormode = false;
             map.final_mapcol = 0;
             map.final_colorframe = 0;
+            obj.checkpoints = obj.fin;
+            game.offsetx = 0;
+            game.offsety = 0;
+            game.offsety2 = game.offsety;
             break;
         default:
             VVV_unreachable();
@@ -2715,7 +2737,7 @@ void scriptclass::startgamemode(const enum StartMode mode)
             SDL_memset(map.explored, true, sizeof(map.explored));
         }
 
-        graphics.fademode = FADE_START_FADEIN;
+        graphics.fademode = FADE_NONE;
         break;
 
     case Start_SECRETLAB:

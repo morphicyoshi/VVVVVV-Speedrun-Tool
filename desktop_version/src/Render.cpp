@@ -41,6 +41,7 @@ struct MapRenderData
     int legendyoff;
 };
 
+
 static inline void drawslowdowntext(const int y)
 {
     switch (game.slowdown)
@@ -211,6 +212,7 @@ static void menurender(void)
         graphics.draw_sprite((160 - 96) + 3 * 32, temp, 23, tr, tg, tb);
         graphics.draw_sprite((160 - 96) + 4 * 32, temp, 23, tr, tg, tb);
         graphics.draw_sprite((160 - 96) + 5 * 32, temp, 23, tr, tg, tb);
+        font::print(PR_CEN | PR_FONT_8X8, 160, 85, "Speedrun Tool v1.0.0", tr * 2, tg * 2, tb * 2);
 #if defined(MAKEANDPLAY)
         font::print(PR_RIGHT, 264, temp+35, loc::gettext("MAKE AND PLAY EDITION"), tr, tg, tb);
 #endif
@@ -2594,6 +2596,11 @@ void gamerender(void)
                 font::print(PR_3X | PR_BOR | PR_CEN, -1, 200, loc::gettext("GO!"), 220 - (help.glow), 220 - (help.glow), 255 - (help.glow / 2));
             }
         }
+    }
+
+    // Checkpoint Lock ON/OFF
+    if (game.texttimer > 0) {
+        font::print(PR_RIGHT, 320, 0, std::string("Checkpoint Lock is ") + (game.lockcheckpoint ? "ON" : "OFF"), 255, 255, 255);
     }
 
     if (game.intimetrial && graphics.fademode == FADE_NONE)

@@ -104,10 +104,10 @@ const short* finalclass::loadlevel(int rx, int ry)
 
         obj.createentity(-8, 116, 11, 40);  // (horizontal gravity line)
         obj.createentity(48, 116, 11, 184);  // (horizontal gravity line)
-        obj.createentity(32, 88, 10, 1, 51500);  // (savepoint)
-        obj.createentity(32, 128, 10, 0, 51501);  // (savepoint)
-        obj.createentity(256, 88, 10, 1, 51502);  // (savepoint)
-        obj.createentity(256, 128, 10, 0, 51503);  // (savepoint)
+        obj.createentity(32, 88, 10, 1, 51500, 50, 51);  // (savepoint)
+        obj.createentity(32, 128, 10, 0, 51501, 50, 51);  // (savepoint)
+        obj.createentity(256, 88, 10, 1, 51502, 50, 51);  // (savepoint)
+        obj.createentity(256, 128, 10, 0, 51503, 50, 51);  // (savepoint)
         warpy = true;
         roomname = "The V Stooges";
         result = contents;
@@ -204,8 +204,8 @@ const short* finalclass::loadlevel(int rx, int ry)
         obj.createentity(288, 116, 11, 32);  // (horizontal gravity line)
         obj.createentity(56, 88, 1, 3, 10);  // Enemy
         obj.createentity(248-16, 128, 1, 2, 10);  // Enemy
-        obj.createentity(272, 168, 10, 0, 51480);  // (savepoint)
-        obj.createentity(32, 48, 10, 1, 51481);  // (savepoint)
+        obj.createentity(272, 168, 10, 0, 51480, 48, 51);  // (savepoint)
+        obj.createentity(32, 48, 10, 1, 51481, 48, 51);  // (savepoint)
 
         warpy = true;
         roomname = "On the Waterfront";
@@ -253,8 +253,8 @@ const short* finalclass::loadlevel(int rx, int ry)
         obj.createentity(-8, 148, 11, 104);  // (horizontal gravity line)
         obj.createentity(-8, 84, 11, 80);  // (horizontal gravity line)
         obj.createentity(176, 116, 11, 144);  // (horizontal gravity line)
-        obj.createentity(128, 96, 10, 0, 51470);  // (savepoint)
-        obj.createentity(128, 56, 10, 1, 51471);  // (savepoint)
+        obj.createentity(128, 96, 10, 0, 51470, 47, 51);  // (savepoint)
+        obj.createentity(128, 56, 10, 1, 51471, 47, 51);  // (savepoint)
 
         warpy = true;
         roomname = "Gvnsmoke";
@@ -352,8 +352,8 @@ const short* finalclass::loadlevel(int rx, int ry)
 
         obj.createentity(248, 84, 11, 72);  // (horizontal gravity line)
         obj.createentity(224, 148, 11, 96);  // (horizontal gravity line)
-        obj.createentity(176, 56, 10, 1, 51450);  // (savepoint)
-        obj.createentity(176, 96, 10, 0, 51451);  // (savepoint)
+        obj.createentity(176, 56, 10, 1, 51450, 45, 51);  // (savepoint)
+        obj.createentity(176, 96, 10, 0, 51451, 45, 51);  // (savepoint)
 
         warpy = true;
         roomname = "Television Newsveel";
@@ -509,7 +509,7 @@ const short* finalclass::loadlevel(int rx, int ry)
         740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,218,98,220,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
         };
 
-        obj.createentity(168, 72, 10, 0, 51420);  // (savepoint)
+        obj.createentity(168, 72, 10, 0, 51420, 42, 51);  // (savepoint)
         obj.createentity(24, 60, 11, 120);  // (horizontal gravity line)
         obj.createentity(24, 148, 11, 120);  // (horizontal gravity line)
 
@@ -557,7 +557,7 @@ const short* finalclass::loadlevel(int rx, int ry)
         740,740,218,98,220,0,0,0,0,0,218,220,218,98,98,98,98,98,98,98,98,98,220,218,98,220,740,740,740,740,740,740,740,740,740,740,740,740,740,740,
         };
 
-        obj.createentity(280, 120, 10, 1, 51410);  // (savepoint)
+        obj.createentity(280, 120, 10, 1, 51410, 41, 51);  // (savepoint)
         obj.createentity(40, 28, 11, 192);  // (horizontal gravity line)
         obj.createentity(96, 204, 11, 88);  // (horizontal gravity line)
         obj.createentity(144, 156, 11, 88);  // (horizontal gravity line)
@@ -606,7 +606,7 @@ const short* finalclass::loadlevel(int rx, int ry)
         740,740,218,98,220,0,0,0,0,0,218,98,220,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,
         };
 
-        obj.createentity(264, 168, 10, 1, 52410);  // (savepoint)
+        obj.createentity(264, 168, 10, 1, 52410, 41, 52);  // (savepoint)
         obj.createentity(152, 112, 20, 1);  // (terminal)
 
         if(!obj.flags[72])
@@ -705,12 +705,12 @@ const short* finalclass::loadlevel(int rx, int ry)
         218,98,98,220,218,98,98,220,218,98,98,220,218,98,98,220,218,98,98,220,218,98,98,220,218,98,98,220,218,98,98,220,218,98,98,220,218,98,98,220,
         };
 
-        obj.createentity(264, 176, 10, 1, 52430);  // (savepoint)
+        obj.createentity(264, 176, 10, 1, 52430, 43, 52);  // (savepoint)
         obj.createentity(96, 180, 11, 96);  // (horizontal gravity line)
         obj.createentity(160, 52, 11, 96);  // (horizontal gravity line)
         obj.createentity(240, 136, 1, 2, 8);  // Enemy
         obj.createentity(96, 88, 1, 3, 8);  // Enemy
-        obj.createentity(72, 32, 10, 0, 52431);  // (savepoint)
+        obj.createentity(72, 32, 10, 0, 52431, 43, 52);  // (savepoint)
         roomname = "Upstairs, Downstairs";
         result = contents;
         break;
@@ -767,7 +767,7 @@ const short* finalclass::loadlevel(int rx, int ry)
         obj.createentity(128+16, 168, 1, 1, 5, 0, 120, 320, 200);  // Enemy, bounded
         obj.createentity(176+24, 128, 1, 0, 5, 0, 120, 320, 200);  // Enemy, bounded
         //obj.createentity(224, 168, 1, 1, 5, 0, 120, 320, 200);  // Enemy, bounded
-        obj.createentity(24, 184, 10, 1, 52440);  // (savepoint)
+        obj.createentity(24, 184, 10, 1, 52440, 44, 52);  // (savepoint)
         roomname = "Timeslip";
         result = contents;
         break;
@@ -809,9 +809,9 @@ const short* finalclass::loadlevel(int rx, int ry)
         740,218,98,220,218,98,220,740,740,218,98,220,218,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,220,218,98,220,740,740,740,740,740,740,740,
         };
 
-        obj.createentity(40, 176, 10, 1, 52450);  // (savepoint)
+        obj.createentity(40, 176, 10, 1, 52450, 45, 52);  // (savepoint)
         obj.createentity(80, 156, 11, 176);  // (horizontal gravity line)
-        obj.createentity(128, 88, 10, 1, 52451);  // (savepoint)
+        obj.createentity(128, 88, 10, 1, 52451, 45, 52);  // (savepoint)
         obj.createentity(160, 76, 11, 96);  // (horizontal gravity line)
         roomname = "Three's Company";
         result = contents;
@@ -901,10 +901,10 @@ const short* finalclass::loadlevel(int rx, int ry)
         98,98,98,98,98,98,98,98,98,220,218,98,98,98,98,98,98,98,98,98,98,220,218,98,220,218,98,98,98,98,98,98,98,98,98,98,220,218,98,98,
         };
 
-        obj.createentity(16, 112, 10, 1, 52480);  // (savepoint)
+        obj.createentity(16, 112, 10, 1, 52480, 48, 52);  // (savepoint)
         obj.createentity(67, 24, 12, 96);  // (vertical gravity line)
         obj.createentity(243, 112, 12, 104);  // (vertical gravity line)
-        obj.createentity(288, 104, 10, 0, 52481);  // (savepoint)
+        obj.createentity(288, 104, 10, 0, 52481, 48, 52);  // (savepoint)
         obj.createentity(187, 24, 12, 80);  // (vertical gravity line)
         obj.createentity(123, 128, 12, 88);  // (vertical gravity line)
 
@@ -949,8 +949,8 @@ const short* finalclass::loadlevel(int rx, int ry)
         98,220,0,0,0,218,98,98,98,98,220,218,98,98,98,98,98,220,218,98,220,740,740,740,740,740,740,740,740,740,218,98,220,218,98,98,98,98,98,98,
         };
 
-        obj.createentity(192, 56, 10, 1, 53500);  // (savepoint)
-        obj.createentity(288, 104, 10, 0, 53501);  // (savepoint)
+        obj.createentity(192, 56, 10, 1, 53500, 50, 53);  // (savepoint)
+        obj.createentity(288, 104, 10, 0, 53501, 50, 53);  // (savepoint)
 
         obj.createentity(168, 96, 1, 0, 5);  // Enemy
         obj.createentity(184+2, 104, 1, 0, 5);  // Enemy
@@ -1003,8 +1003,8 @@ const short* finalclass::loadlevel(int rx, int ry)
         740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,
         };
 
-        obj.createentity(24, 88, 10, 1, 54500);  // (savepoint)
-        obj.createentity(280, 184, 10, 1, 54501);  // (savepoint)
+        obj.createentity(24, 88, 10, 1, 54500, 50 ,54);  // (savepoint)
+        obj.createentity(280, 184, 10, 1, 54501, 50, 54);  // (savepoint)
         obj.createentity(56, 44, 11, 56);  // (horizontal gravity line)
         obj.createentity(131, 72, 12, 64);  // (vertical gravity line)
         obj.createentity(144, 36, 11, 48);  // (horizontal gravity line)
@@ -1055,7 +1055,7 @@ const short* finalclass::loadlevel(int rx, int ry)
         740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,740,
         };
 
-        obj.createentity(16, 48, 10, 1, 53520);  // (savepoint)
+        obj.createentity(16, 48, 10, 1, 53520, 52, 53);  // (savepoint)
         obj.createentity(96, 144, 3);  //Disappearing Platform
         obj.createentity(128, 144, 3);  //Disappearing Platform
         obj.createentity(160, 144, 3);  //Disappearing Platform
@@ -1506,7 +1506,7 @@ const short* finalclass::loadlevel(int rx, int ry)
         0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,218,98,220,218,98,220,218,98,220,218,98,220,218,98,220,218,98,220,740,740,740,740,740,740,
         };
 
-        obj.createentity(264, 32, 10, 0, 54480);  // (savepoint)
+        obj.createentity(264, 32, 10, 0, 54480, 48, 54);  // (savepoint)
 
         /*if(!game.nocutscenes && !obj.flags[71]){
         obj.createblock(1, 72, 0, 320, 240, 49);

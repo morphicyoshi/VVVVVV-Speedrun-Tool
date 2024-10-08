@@ -2643,7 +2643,7 @@ void gameinput(void)
         game.interactheld = false;
     }
 
-    if (game.intimetrial && graphics.fademode == FADE_FULLY_BLACK && game.quickrestartkludge && !game.translator_exploring)
+    if (game.intimetrial && graphics.fademode == FADE_NONE && game.quickrestartkludge && !game.translator_exploring)
     {
         //restart the time trial
         game.quickrestartkludge = false;
@@ -2946,7 +2946,7 @@ void gameinput(void)
     else if (game.intimetrial && graphics.fademode == FADE_NONE && !game.translator_exploring)
     {
         //Quick restart of time trial
-        graphics.fademode = FADE_START_FADEOUT;
+        graphics.fademode = FADE_NONE;
         game.completestop = true;
         music.fadeout();
         game.quickrestartkludge = true;
@@ -2976,6 +2976,113 @@ void gameinput(void)
             game.menupage = 0; // The Map Page
         }
     }
+
+
+    // Checkpoint Lock
+    if (key.isDown(KEYBOARD_k) && game.intimetrial && graphics.fademode == FADE_NONE && game.texttimer <= 30)
+    {
+        game.lockcheckpoint = !game.lockcheckpoint;
+        game.texttimer = 45;
+    }
+    else if (!game.intimetrial) {
+        game.lockcheckpoint = false;
+        game.texttimer = 0;
+    }
+
+    // Checkpoint Switcher
+    game.delaytimer--;
+    if (key.isDown(KEYBOARD_l) && game.intimetrial && graphics.fademode == FADE_NONE && game.delaytimer < 1 && game.checkpointcount + 1 < obj.checkpoints.size())
+    {
+        int player = obj.getplayer();
+        game.timetrialcheater = true;
+        if (game.finalstretch != 1) {
+            game.checkpointcount++;
+            game.savepoint = obj.checkpoints[game.checkpointcount].para;
+            if (obj.checkpoints[game.checkpointcount].ry > 54)
+            {
+                game.saverx = obj.checkpoints[game.checkpointcount].rx + game.offsetx;
+                game.savery = obj.checkpoints[game.checkpointcount].ry + game.offsety;
+            }
+            else
+            {
+                game.saverx = obj.checkpoints[game.checkpointcount].rx + game.offsetx;
+                game.savery = obj.checkpoints[game.checkpointcount].ry + game.offsety2;
+            }
+            game.savex = obj.checkpoints[game.checkpointcount].xp - 4;
+            if (obj.checkpoints[game.checkpointcount].tile == 20)
+            {
+                game.savey = obj.checkpoints[game.checkpointcount].yp - 2;
+                game.savegc = 1;
+            }
+            else if (obj.checkpoints[game.checkpointcount].tile == 21)
+            {
+                game.savey = obj.checkpoints[game.checkpointcount].yp - 7;
+                game.savegc = 0;
+            }
+        }
+        if (game.finalstretch == 1)
+        {
+            game.setstate(85);
+            game.finalstretch = 2;
+        }
+        if (game.savepoint == 52410 && game.finalstretch < 1)
+        {
+            game.finalstretch = 1;
+        }
+        
+
+        obj.entities[player].xp = game.savex;
+        obj.entities[player].yp = game.savey;
+        map.gotoroom(game.saverx, game.savery);
+        game.gravitycontrol = game.savegc;
+        game.delaytimer = 6;
+
+        if (game.finalstretch == 2) {
+            game.finalstretch = 0;
+        } 
+    }
+
+    if (key.isDown(KEYBOARD_j) && game.intimetrial && graphics.fademode == FADE_NONE && game.delaytimer < 1 && game.checkpointcount > 0)
+    {
+        int player = obj.getplayer();
+        game.timetrialcheater = true;
+        game.finalstretch = 0;
+        game.checkpointcount--;
+        game.savepoint = obj.checkpoints[game.checkpointcount].para;
+        if (obj.checkpoints[game.checkpointcount].ry > 54)
+        {
+            game.saverx = obj.checkpoints[game.checkpointcount].rx + game.offsetx;
+            game.savery = obj.checkpoints[game.checkpointcount].ry + game.offsety;
+        }
+        else
+        {
+            game.saverx = obj.checkpoints[game.checkpointcount].rx + game.offsetx;
+            game.savery = obj.checkpoints[game.checkpointcount].ry + game.offsety2;
+        }
+        game.savex = obj.checkpoints[game.checkpointcount].xp - 4;
+        if (obj.checkpoints[game.checkpointcount].tile == 20)
+        {
+            game.savey = obj.checkpoints[game.checkpointcount].yp - 2;
+            game.savegc = 1;
+
+        }
+        else if (obj.checkpoints[game.checkpointcount].tile == 21)
+        {
+            game.savey = obj.checkpoints[game.checkpointcount].yp - 7;
+            game.savegc = 0;
+        }
+
+        obj.entities[player].xp = game.savex;
+        obj.entities[player].yp = game.savey;
+        map.gotoroom(game.saverx, game.savery);
+        game.gravitycontrol = game.savegc;
+        game.delaytimer = 6;
+    }
+    if (!game.intimetrial)
+    {
+        game.checkpointcount = -1;
+    }
+
 
     if (!game.mapheld
     && (key.isDown(27) || key.isDown(game.controllerButton_esc))

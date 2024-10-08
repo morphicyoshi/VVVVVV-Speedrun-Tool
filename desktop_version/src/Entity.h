@@ -168,6 +168,13 @@ public:
 
 
     std::vector<entclass> entities;
+    std::vector<entclass> checkpoints;
+    std::vector<entclass> ss1;
+    std::vector<entclass> lab;
+    std::vector<entclass> tower;
+    std::vector<entclass> ss2;
+    std::vector<entclass> warp;
+    std::vector<entclass> fin;
 
     int k;
 
@@ -201,6 +208,7 @@ public:
     std::string customactivitytext;
     int customactivitypositiony;
 };
+
 
 #ifndef OBJ_DEFINITION
 extern entityclass obj;

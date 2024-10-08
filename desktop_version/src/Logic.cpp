@@ -744,6 +744,11 @@ void gamelogic(void)
                 break;
             }
         }
+        
+        //Text Timer
+        if (game.texttimer > 0) {
+            game.texttimer--;
+        }
 
         //Time trial stuff
         if (game.intimetrial)

@@ -60,7 +60,7 @@ const short* warpclass::loadlevel(int rx, int ry)
         120,120,120,120,120,120,120,120,120,120,120,120,120,200,80,202,0,0,0,0,0,0,0,0,200,80,202,120,120,120,120,120,120,120,120,120,120,120,120,120,
         };
 
-        obj.createentity(288, 168, 10, 1, 50500);  // (savepoint)
+        obj.createentity(288, 168, 10, 1, 50500, 50, 50);  // (savepoint)
 
         if(game.intimetrial)
         {
@@ -153,9 +153,9 @@ const short* warpclass::loadlevel(int rx, int ry)
         83,83,83,83,83,205,0,0,0,0,203,83,83,83,83,83,83,205,0,0,0,0,203,83,83,83,83,83,83,205,0,0,0,0,203,83,83,83,83,83,
         };
 
-        obj.createentity(248, 80, 10, 1, 51510);  // (savepoint)
+        obj.createentity(248, 80, 10, 1, 51510, 51, 51);  // (savepoint)
         obj.createentity(136, 128, 1, 3, 3, 128, 120, 288, 152);  // Enemy, bounded
-        obj.createentity(104, 192, 10, 1, 51511);  // (savepoint)
+        obj.createentity(104, 192, 10, 1, 51511, 51, 51);  // (savepoint)
         rcol = 1;
         warpy = true;
         roomname = "Take the Red Pill";
@@ -203,7 +203,7 @@ const short* warpclass::loadlevel(int rx, int ry)
         obj.createentity(96, 24, 1, 3, 4, -56, -40, 384, 312);  // Enemy, bounded
         obj.createentity(160, 24, 1, 3, 4, -56, -40, 384, 312);  // Enemy, bounded
         obj.createentity(224, 24, 1, 3, 4, -56, -40, 384, 312);  // Enemy, bounded
-        obj.createentity(232, 152, 10, 1, 51520);  // (savepoint)
+        obj.createentity(232, 152, 10, 1, 51520, 52, 51);  // (savepoint)
         rcol = 5;
         warpx = true;
         roomname = "Short Circuit";
@@ -247,7 +247,7 @@ const short* warpclass::loadlevel(int rx, int ry)
         213,212,92,214,252,254,0,0,0,0,0,0,212,214,0,0,0,0,0,0,212,214,0,0,0,0,0,0,212,214,0,0,0,0,0,0,212,92,92,92,
         };
 
-        obj.createentity(32, 16, 10, 0, 50520);  // (savepoint)
+        obj.createentity(32, 16, 10, 0, 50520, 52, 50);  // (savepoint)
         rcol = 4;
         warpy = true;
         roomname = "As you like it";
@@ -292,7 +292,7 @@ const short* warpclass::loadlevel(int rx, int ry)
         89,89,89,89,89,89,89,89,89,89,89,89,89,89,211,209,211,209,89,89,89,89,89,89,89,89,89,89,89,89,89,89,211,209,211,209,89,89,89,89,
         };
 
-        obj.createentity(16, 120, 10, 1, 50530);  // (savepoint)
+        obj.createentity(16, 120, 10, 1, 50530, 53, 50);  // (savepoint)
         rcol = 3;
         warpx = true;
         roomname = "Maze With No Entrance";
@@ -336,7 +336,7 @@ const short* warpclass::loadlevel(int rx, int ry)
         126,126,126,126,206,86,208,0,0,0,206,86,208,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,206,86,
         };
 
-        obj.createentity(64, 152, 10, 0, 49530);  // (savepoint)
+        obj.createentity(64, 152, 10, 0, 49530, 53, 49);  // (savepoint)
         rcol = 2;
         warpy = true;
         roomname = "As we go up, we go down";
@@ -380,10 +380,10 @@ const short* warpclass::loadlevel(int rx, int ry)
         80,80,80,80,80,80,80,80,80,202,200,202,0,0,0,0,200,80,80,80,80,80,80,80,80,80,80,80,80,80,80,80,80,80,80,202,200,202,200,80,
         };
 
-        obj.createentity(296, 64, 10, 1, 49540);  // (savepoint)
+        obj.createentity(296, 64, 10, 1, 49540, 54, 49);  // (savepoint)
         obj.createentity(152-4-15+8, 32, 1, 0, 6, 128, 32, 288, 200);  // Enemy, bounded
         obj.createentity(240-4-15+8, 186, 1, 1, 6, 128, 32, 288, 200);  // Enemy, bounded
-        obj.createentity(296, 152, 10, 0, 49541);  // (savepoint)
+        obj.createentity(296, 152, 10, 0, 49541, 54, 49);  // (savepoint)
         rcol = 0;
         warpx = true;
         roomname = "Time to get serious";
@@ -476,8 +476,8 @@ const short* warpclass::loadlevel(int rx, int ry)
 
         obj.createentity(96, 72, 1, 3, 8, 64, 56, 256, 152);  // Enemy, bounded
         obj.createentity(240, 120, 1, 2, 8, 64, 56, 256, 152);  // Enemy, bounded
-        obj.createentity(72, 16, 10, 0, 50550);  // (savepoint)
-        obj.createentity(264, 176, 10, 1, 50551);  // (savepoint)
+        obj.createentity(72, 16, 10, 0, 50550, 55, 50);  // (savepoint)
+        obj.createentity(264, 176, 10, 1, 50551, 55, 50);  // (savepoint)
         rcol = 4;
         warpx = true;
         roomname = "Ascending and Descending";
@@ -525,8 +525,8 @@ const short* warpclass::loadlevel(int rx, int ry)
         obj.createentity(136, 192, 1, 3, 3, 128, 16, 304, 216);  // Enemy, bounded
         obj.createentity(40, 8, 1, 0, 10, 24, -56, 120, 280);  // Enemy, bounded
         obj.createentity(88, 8, 1, 0, 10, 24, -40, 120, 272);  // Enemy, bounded
-        obj.createentity(256, 128, 10, 1, 51550);  // (savepoint)
-        obj.createentity(136, 32, 10, 1, 51551);  // (savepoint)
+        obj.createentity(256, 128, 10, 1, 51550, 55, 51);  // (savepoint)
+        obj.createentity(136, 32, 10, 1, 51551, 55, 51);  // (savepoint)
         rcol = 1;
         warpy = true;
         roomname = "Shockwave Rider";
@@ -570,7 +570,7 @@ const short* warpclass::loadlevel(int rx, int ry)
         89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,211,209,89,89,211,209,89,89,89,89,89,89,89,89,211,0,0,0,0,209,89,89,89,
         };
 
-        obj.createentity(296, 32, 10, 1, 51540);  // (savepoint)
+        obj.createentity(296, 32, 10, 1, 51540, 54, 51);  // (savepoint)
         obj.createentity(184, 192, 1, 18, 48, -800, -24, 4000, 264);  // Enemy, bounded
         obj.createentity(88, 136, 1, 17, 48, -800, -32, 4000, 272);  // Enemy, bounded
         obj.createentity(184, 80, 1, 18, 48, -800, -32, 4000, 272);  // Enemy, bounded
@@ -622,7 +622,7 @@ const short* warpclass::loadlevel(int rx, int ry)
         95,95,95,217,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255,257,0,0,0,0,215,95,95,95,
         };
 
-        obj.createentity(288, 200, 10, 1, 52540);  // (savepoint)
+        obj.createentity(288, 200, 10, 1, 52540, 54, 52);  // (savepoint)
         obj.createentity(48, 16, 1, 1, 10, 0, -40, 320, 296);  // Enemy, bounded
         obj.createentity(64, 16+8+4+2, 1, 1, 10, 0, -48, 320, 280);  // Enemy, bounded
         obj.createentity(80, 16+16+8+4, 1, 1, 10, 0, -40, 320, 280);  // Enemy, bounded
@@ -677,7 +677,7 @@ const short* warpclass::loadlevel(int rx, int ry)
         86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,86,
         };
 
-        obj.createentity(152, 200, 10, 1, 52530);  // (savepoint)
+        obj.createentity(152, 200, 10, 1, 52530, 53, 52);  // (savepoint)
         obj.createentity(248, 48, 1, 3, 5, -24, -24, 344, 256);  // Enemy, bounded
         obj.createentity(152, 48, 1, 3, 5, -24, -24, 344, 256);  // Enemy, bounded
         obj.createentity(152, 96, 1, 2, 5, -24, -24, 344, 256);  // Enemy, bounded
@@ -778,7 +778,7 @@ const short* warpclass::loadlevel(int rx, int ry)
         };
 
         obj.createentity(152, 112, 13);
-        obj.createentity(152, 152, 10, 0, 49550);  // (savepoint)
+        obj.createentity(152, 152, 10, 0, 49550, 55, 49);  // (savepoint)
         rcol = 4;
         warpx = true;
         warpy = true;
@@ -824,7 +824,7 @@ const short* warpclass::loadlevel(int rx, int ry)
         };
 
         obj.createentity(152, 112, 13);
-        obj.createentity(136, 40, 10, 1, 52550);  // (savepoint)
+        obj.createentity(136, 40, 10, 1, 52550, 55, 52);  // (savepoint)
         rcol = 3;
         warpx = true;
         warpy = true;
@@ -870,7 +870,7 @@ const short* warpclass::loadlevel(int rx, int ry)
         };
 
         obj.createentity(152, 112, 13);
-        obj.createentity(288, 120, 10, 1, 52520);  // (savepoint)
+        obj.createentity(288, 120, 10, 1, 52520, 52, 52);  // (savepoint)
         rcol = 5;
         warpx = true;
         warpy = true;
@@ -916,7 +916,7 @@ const short* warpclass::loadlevel(int rx, int ry)
         };
 
         obj.createentity(152, 112, 13);
-        obj.createentity(24, 128, 10, 1, 52510);  // (savepoint)
+        obj.createentity(24, 128, 10, 1, 52510, 50, 51);  // (savepoint)
         obj.createentity(56, 48, 1, 0, 10, -16, -16, 336, 256);  // Enemy, bounded
         obj.createentity(264, 48, 1, 0, 10, -16, -16, 336, 256);  // Enemy, bounded
         obj.createentity(152, 48, 1, 2, 8, -24, -24, 344, 256);  // Enemy, bounded
@@ -971,7 +971,7 @@ const short* warpclass::loadlevel(int rx, int ry)
         obj.createentity(200, 56, 1, 2, 5, -24, -24, 344, 256);  // Enemy, bounded
         obj.createentity(152, 56, 1, 2, 5, -24, -24, 344, 256);  // Enemy, bounded
         obj.createentity(104, 56, 1, 2, 5, -24, -24, 344, 256);  // Enemy, bounded
-        obj.createentity(152, 152, 10, 0, 49520);  // (savepoint)
+        obj.createentity(152, 152, 10, 0, 49520, 52, 49);  // (savepoint)
         rcol = 2;
         warpx = true;
         warpy = true;

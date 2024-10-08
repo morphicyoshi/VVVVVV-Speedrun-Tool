@@ -441,6 +441,10 @@ public:
     int timetrialresultshinytarget, timetrialresulttrinkets, timetrialresultpar;
     int timetrialresultdeaths;
 
+    //Speedrun Tool
+    bool lockcheckpoint;
+    int texttimer, delaytimer, checkpointcount, offsetx, offsety, offsety2, finalstretch;
+
     bool start_translator_exploring;
     bool translator_exploring;
     bool translator_exploring_allowtele;

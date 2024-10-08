@@ -287,6 +287,16 @@ void Game::init(void)
     translator_exploring_allowtele = false;
     translator_cutscene_test = false;
 
+    /* Speedrun Tool Implementation*/
+    lockcheckpoint = false;
+    finalstretch = false;
+    texttimer = 0;
+    delaytimer = 0;
+    checkpointcount = -1;
+    offsetx = 0;
+    offsety = 0;
+    offsety2 = 0;
+
     totalflips = 0;
     hardestroom = "Welcome Aboard";
     hardestroomdeaths = 0;
@@ -1924,8 +1934,11 @@ void Game::updatestate(void)
             || (timetrialresulttime == besttimes[timetriallevel] && timetrialresultframes < bestframes[timetriallevel])
             || besttimes[timetriallevel]==-1)
             {
-                besttimes[timetriallevel] = timetrialresulttime;
-                bestframes[timetriallevel] = timetrialresultframes;
+                if (!timetrialcheater)
+                {
+                    besttimes[timetriallevel] = timetrialresulttime;
+                    bestframes[timetriallevel] = timetrialresultframes;
+                }
             }
             if (timetrialresulttrinkets > besttrinkets[timetriallevel] || besttrinkets[timetriallevel]==-1)
             {

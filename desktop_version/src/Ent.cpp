@@ -8,6 +8,18 @@ entclass::entclass(void)
     clear();
 }
 
+entclass::entclass(int x, int y, int t, int meta1, int meta2, int roomx, int roomy)
+{
+    clear();
+    xp = x;
+    yp = y;
+    type = t;
+    tile = 20 + meta1;
+    para = meta2;
+    rx = roomx;
+    ry = roomy;
+}
+
 void entclass::clear(void)
 {
     invis = false;

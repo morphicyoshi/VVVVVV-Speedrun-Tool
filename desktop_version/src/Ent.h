@@ -9,6 +9,7 @@ class entclass
 {
 public:
     entclass(void);
+    entclass(int xp, int yp, int t, int meta1, int meta2, int rx, int ry);
     void clear(void);
 
     bool outside(void);
@@ -30,6 +31,7 @@ public:
     int state, statedelay;
     int behave, animate;
     float para;
+    int rx, ry;
     int life, colour;
 
     //Position and velocity

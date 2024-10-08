@@ -91,7 +91,164 @@ void entityclass::init(void)
     trophytype = 0;
     altstates = 0;
 
+    // Space Station 1 Checkpoints
+    ss1.push_back(entclass(152, 168, 10, 1, 441530, 53, 41));
+    ss1.push_back(entclass(232, 184, 10, 0, 1, 53, 39));
+    ss1.push_back(entclass(192, 48, 10, 0, 439520, 52, 39));
+    ss1.push_back(entclass(216, 144, 10, 1, 440520, 52, 40));
+    ss1.push_back(entclass(112, 160, 10, 1, 439521, 52, 39));
+    ss1.push_back(entclass(280, 48, 10, 0, 439511, 51, 39));
+    ss1.push_back(entclass(24, 168, 10, 1, 439510, 51, 39));
+    ss1.push_back(entclass(168, 104, 10, 1, 439500, 50, 39));
+    ss1.push_back(entclass(56, 104, 10, 1, 440500, 50, 40));
+    ss1.push_back(entclass(280, 192, 10, 1, 440501, 50, 40));
+    ss1.push_back(entclass(64, 80, 10, 1, 441501, 50, 41));
+    ss1.push_back(entclass(64, 136, 10, 0, 441502, 50, 41));
+    ss1.push_back(entclass(288, 160, 10, 1, 442500, 50, 42));
+    ss1.push_back(entclass(64, 80, 10, 1, 443501, 50, 43));
+    ss1.push_back(entclass(152, 80, 10, 1, 443521, 52, 43));
+    ss1.push_back(entclass(40, 24, 10, 0, 442530, 53, 42));
+    ss1.push_back(entclass(264, 24, 10, 0, 442531, 53, 42));
+    ss1.push_back(entclass(136 + 4, 96, 10, 1, 443541, 54, 43));
 
+    // The Laboratory Checkpoints
+    lab.push_back(entclass(232, 24, 10, 0, 250500, 50, 50));
+    lab.push_back(entclass(248, 48, 10, 0, 251490, 49, 51));
+    lab.push_back(entclass(248, 136, 10, 1, 252490, 49, 52));
+    lab.push_back(entclass(280, 136, 10, 1, 252480, 48, 52));
+    lab.push_back(entclass(32, 128, 10, 1, 253480, 48, 53));
+    lab.push_back(entclass(96, 192, 10, 1, 253500, 50, 53));
+    lab.push_back(entclass(224, 72, 10, 1, 252501, 50, 52));
+    lab.push_back(entclass(48, 72, 10, 1, 252500, 50, 52));
+    lab.push_back(entclass(40, 112, 10, 0, 253511, 51, 53));
+    lab.push_back(entclass(264, 104, 10, 1, 253510, 51, 53));
+    lab.push_back(entclass(24, 184, 10, 1, 253520, 52, 53));
+    lab.push_back(entclass(80, 120, 10, 0, 252520, 52, 52));
+    lab.push_back(entclass(80, 96, 10, 1, 252521, 52, 52));
+    lab.push_back(entclass(280, 96, 10, 1, 252510, 51, 52));
+    lab.push_back(entclass(88, 112, 10, 0, 250510, 51, 50));
+    lab.push_back(entclass(32, 72, 10, 1, 250520, 52, 50));
+    lab.push_back(entclass(160, 176, 10, 0, 249550, 55, 49));
+    lab.push_back(entclass(120, 72, 10, 1, 252550, 55, 52));
+    lab.push_back(entclass(272, 144, 10, 1, 253550, 55, 53));
+    lab.push_back(entclass(216, 144, 10, 1, 254550, 55, 54));
+    lab.push_back(entclass(264, 72, 10, 0, 254530, 53, 54));
+    lab.push_back(entclass(40, 144, 10, 1, 254531, 53, 54));
+    lab.push_back(entclass(160 - 4, 120, 10, 1, 254510, 51, 54));
+    lab.push_back(entclass(240 + 4, 96, 10, 0, 254490, 49, 54));
+    lab.push_back(entclass(216, 56, 10, 0, 255490, 49, 55));
+    lab.push_back(entclass(8, 48, 10, 0, 255510, 51, 55));
+    lab.push_back(entclass(16, 184, 10, 1, 255520, 52, 55));
+    lab.push_back(entclass(112, 184, 10, 1, 258520, 52, 58));
+
+
+    // Space Station 2 Checkpoints
+    ss2.push_back(entclass(96, 40, 10, 0, 450500, 50, 50));
+    ss2.push_back(entclass(64, 32, 10, 0, 447490, 49, 47));
+    ss2.push_back(entclass(264, 96, 10, 1, 448500, 50, 48));
+    ss2.push_back(entclass(224, 120, 10, 0, 447491, 49, 47));
+    ss2.push_back(entclass(128, 176, 10, 1, 449490, 49, 49));
+    ss2.push_back(entclass(24, 16, 10, 0, 449500, 50, 49));
+    ss2.push_back(entclass(280, 16, 10, 0, 449501, 50, 49));
+    ss2.push_back(entclass(152, 88, 10, 1, 449510, 51, 49));
+    ss2.push_back(entclass(152, 120, 10, 0, 449511, 51, 49));
+    ss2.push_back(entclass(152, 168, 10, 1, 448530, 53, 48));
+    ss2.push_back(entclass(152, 120, 10, 0, 449530, 53, 49));
+    ss2.push_back(entclass(264, 128, 10, 0, 448540, 54, 48));
+    ss2.push_back(entclass(104, 24, 10, 0, 448541, 54, 48));
+    ss2.push_back(entclass(232, 64, 10, 1, 448521, 52, 48));
+    ss2.push_back(entclass(232, 144, 10, 0, 448522, 52, 48));
+    ss2.push_back(entclass(72, 64, 10, 1, 448520, 52, 48));
+    ss2.push_back(entclass(72, 144, 10, 0, 448523, 52, 48));
+    ss2.push_back(entclass(72, 80, 10, 1, 448510, 51, 48));
+    ss2.push_back(entclass(72, 184, 10, 0, 447510, 51, 47));
+    ss2.push_back(entclass(8, 200, 10, 1, 447520, 52, 47)); 
+    ss2.push_back(entclass(176, 104, 10, 0, 446510, 51, 46));
+    ss2.push_back(entclass(96, 168, 10, 0, 445510, 51, 45));
+    ss2.push_back(entclass(224, 200, 10, 1, 444510, 51, 44));
+    ss2.push_back(entclass(152, 120, 10, 0, 445530, 53, 45));
+    ss2.push_back(entclass(152, 96, 10, 1, 446530, 53, 46));
+    ss2.push_back(entclass(64, 40, 10, 1, 446520, 52, 46));
+    ss2.push_back(entclass(232, 96, 10, 1, 447521, 52, 47));
+    ss2.push_back(entclass(64, 152, 10, 1, 446540, 54, 46));
+    ss2.push_back(entclass(96, 80, 10, 1, 447540, 54, 47));
+    ss2.push_back(entclass(208, 168, 10, 1, 447541, 54, 47));
+    ss2.push_back(entclass(152, 168, 10, 1, 447550, 55, 47));
+    ss2.push_back(entclass(64, 176, 10, 0, 445550, 55, 45));
+    ss2.push_back(entclass(216 - 4, 192, 10, 1, 445551, 55, 45));
+    ss2.push_back(entclass(248, 184, 10, 1, 445540, 54, 45));
+    ss2.push_back(entclass(32, 40, 10, 1, 444560, 55, 44));
+    ss2.push_back(entclass(272, 40, 10, 1, 444550, 55, 44));
+    ss2.push_back(entclass(72, 72, 10, 1, 444561, 56, 44));
+    ss2.push_back(entclass(96, 152, 10, 1, 450560, 56, 50));
+    ss2.push_back(entclass(32 + 4, 48, 10, 0, 443540, 54, 43));
+    ss2.push_back(entclass(56, 144, 10, 0, 443520, 52, 43));
+    ss2.push_back(entclass(280, 192, 10, 1, 443500, 50, 43));
+    ss2.push_back(entclass(240, 136, 10, 0, 443490, 49, 43));
+    ss2.push_back(entclass(152, 184, 10, 0, 443481, 48, 43));
+    ss2.push_back(entclass(152, 32, 10, 1, 443480, 48, 43));
+    ss2.push_back(entclass(56, 64, 10, 0, 442480, 48, 42));
+    ss2.push_back(entclass(280, 152, 10, 1, 442481, 48, 42));
+    ss2.push_back(entclass(144, 168, 10, 1, 442490, 49, 42));
+    ss2.push_back(entclass(24, 112, 10, 0, 442491, 49, 42));
+    ss2.push_back(entclass(192, 88, 10, 0, 441490, 49, 41));
+
+
+
+    // Warp Zone Checkpoints
+    warp.push_back(entclass(288, 168, 10, 1, 50500, 50, 50));
+    warp.push_back(entclass(104, 192, 10, 1, 51511, 51, 51));
+    warp.push_back(entclass(248, 80, 10, 1, 51510, 51, 51));
+    warp.push_back(entclass(232, 152, 10, 1, 51520, 52, 51));
+    warp.push_back(entclass(32, 16, 10, 0, 50520, 52, 50));
+    warp.push_back(entclass(16, 120, 10, 1, 50530, 53, 50));
+    warp.push_back(entclass(64, 152, 10, 0, 49530, 53, 49));
+    warp.push_back(entclass(296, 64, 10, 1, 49540, 54, 49));
+    warp.push_back(entclass(296, 152, 10, 0, 49541, 54, 49));
+    warp.push_back(entclass(72, 16, 10, 0, 50550, 55, 50));
+    warp.push_back(entclass(264, 176, 10, 1, 50551, 55, 50));
+    warp.push_back(entclass(136, 32, 10, 1, 51551, 55, 51));
+    warp.push_back(entclass(256, 128, 10, 1, 51550, 55, 51));
+    warp.push_back(entclass(296, 32, 10, 1, 51540, 54, 51));
+    warp.push_back(entclass(288, 200, 10, 1, 52540, 54, 52));
+    warp.push_back(entclass(152, 200, 10, 1, 52530, 53, 52));
+    warp.push_back(entclass(152, 152, 10, 0, 49550, 55, 49));
+    warp.push_back(entclass(136, 40, 10, 1, 52550, 55, 52));
+    warp.push_back(entclass(288, 120, 10, 1, 52520, 52, 52));
+    warp.push_back(entclass(152, 152, 10, 0, 49520, 52, 49));
+    warp.push_back(entclass(24, 128, 10, 1, 52510, 50, 51));
+
+    // Final Level Checkpoints
+    fin.push_back(entclass(264, 32, 10, 0, 54480, 48, 54));
+    fin.push_back(entclass(280, 184, 10, 1, 54501, 50, 54));
+    fin.push_back(entclass(24, 88, 10, 1, 54500, 50, 54));
+    fin.push_back(entclass(288, 104, 10, 0, 53501, 50, 53));
+    fin.push_back(entclass(192, 56, 10, 1, 53500, 50, 53));
+    fin.push_back(entclass(256, 128, 10, 0, 51503, 50, 51));
+    fin.push_back(entclass(256, 88, 10, 1, 51502, 50, 51));
+    fin.push_back(entclass(32, 88, 10, 1, 51500, 50, 51));
+    fin.push_back(entclass(32, 128, 10, 0, 51501, 50, 51));
+    fin.push_back(entclass(272, 168, 10, 0, 51480, 48, 51));
+    fin.push_back(entclass(32, 48, 10, 1, 51481, 48, 51));
+    fin.push_back(entclass(128, 56, 10, 1, 51471, 47, 51));
+    fin.push_back(entclass(176, 56, 10, 1, 51450, 45, 51));
+    fin.push_back(entclass(168, 72, 10, 0, 51420, 42, 51));
+    fin.push_back(entclass(280, 120, 10, 1, 51410, 41, 51));
+    fin.push_back(entclass(264, 168, 10, 1, 52410, 41, 52));
+    fin.push_back(entclass(72, 32, 10, 0, 52431, 43, 52));
+    fin.push_back(entclass(264, 176, 10, 1, 52430, 43, 52));
+    fin.push_back(entclass(24, 184, 10, 1, 52440, 44, 52));
+    fin.push_back(entclass(40, 176, 10, 1, 52450, 45, 52));
+    fin.push_back(entclass(128, 88, 10, 1, 52451, 45, 52));
+    fin.push_back(entclass(176, 96, 10, 0, 51451, 45, 51));
+    fin.push_back(entclass(128, 96, 10, 0, 51470, 47, 51));
+    fin.push_back(entclass(16, 112, 10, 1, 52480, 48, 52));
+    fin.push_back(entclass(288, 104, 10, 0, 52481, 48, 52));
+    fin.push_back(entclass(24, 88, 10, 1, 54500, 50, 54));
+    fin.push_back(entclass(280, 184, 10, 1, 54501, 50, 54));
+    fin.push_back(entclass(288, 104, 10, 0, 53501, 50, 53));
+    fin.push_back(entclass(16, 48, 10, 1, 53520, 52, 53));
+    
     SDL_memset(customcrewmoods, true, sizeof(customcrewmoods));
 
     resetallflags();
@@ -1569,7 +1726,8 @@ void entityclass::createentity(int xp, int yp, int t, int meta1, int meta2, int 
         entity.onentity = 1;
         entity.animate = 100;
         entity.para = meta2;
-
+        entity.rx = p1;
+        entity.ry = p2;
         if (game.savepoint == meta2)
         {
             entity.colour = 5;
@@ -2712,7 +2870,7 @@ bool entityclass::updateentities( int i )
             break;
         case 8: //Savepoints
             //wait for collision
-            if (entities[i].state == 1)
+            if (entities[i].state == 1 && !game.lockcheckpoint)
             {
                 //First, deactivate all other savepoints
                 for (size_t j = 0; j < entities.size(); j++)
@@ -2726,6 +2884,14 @@ bool entityclass::updateentities( int i )
                 entities[i].colour = 5;
                 entities[i].onentity = 0;
                 game.savepoint = entities[i].para;
+                for (int i = 0; i < checkpoints.size(); i++)
+                {
+                    if (checkpoints[i].para == game.savepoint)
+                    {
+                        game.checkpointcount = i;
+                        break;
+                    }
+                }
                 music.playef(Sound_CHECKPOINT);
 
                 game.savex = entities[i].xp - 4;
