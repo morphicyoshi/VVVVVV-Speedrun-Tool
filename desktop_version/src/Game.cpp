@@ -225,6 +225,7 @@ void Game::init(void)
     ndmresulthardestroom_x = hardestroom_x;
     ndmresulthardestroom_y = hardestroom_y;
     ndmresulthardestroom_specialname = false;
+    nodeatheligible = false;
 
     customcol=0;
 
@@ -385,6 +386,12 @@ void Game::init(void)
     old_screenshot_border_timer = 0;
     screenshot_border_timer = 0;
     screenshot_saved_success = false;
+
+#ifdef __ANDROID__
+    checkpoint_saving = true;
+#else
+    checkpoint_saving = false;
+#endif
 
     setdefaultcontrollerbuttons();
 }
@@ -831,12 +838,37 @@ static void savetele_textbox_success(textboxclass* THIS)
     THIS->pad(3, 3);
 }
 
-static void savetele_textbox_fail(textboxclass* THIS)
+static void save_textbox_fail(textboxclass* THIS)
 {
     THIS->lines.clear();
     THIS->lines.push_back(loc::gettext("ERROR: Could not save game!"));
     THIS->wrap(2);
     THIS->pad(1, 1);
+}
+
+void Game::show_save_fail(void)
+{
+    graphics.createtextboxflipme("", -1, 12, TEXT_COLOUR("red"));
+    graphics.textboxprintflags(PR_FONT_INTERFACE);
+    graphics.textboxcenterx();
+    graphics.textboxtimer(50);
+    graphics.textboxtranslate(TEXTTRANSLATE_FUNCTION, save_textbox_fail);
+}
+
+void Game::checkpoint_save(void)
+{
+    if (checkpoint_saving && !inspecial() && (!map.custommode || (map.custommode && map.custommodeforreal)) && !cliplaytest)
+    {
+        bool success = map.custommode ? customsavequick(cl.ListOfMetaData[playcustomlevel].filename) : savequick();
+        gamesaved = success;
+        gamesavefailed = !success;
+
+        if (gamesavefailed)
+        {
+            show_save_fail();
+            graphics.textboxapplyposition();
+        }
+    }
 }
 
 void Game::savetele_textbox(void)
@@ -856,11 +888,7 @@ void Game::savetele_textbox(void)
     }
     else
     {
-        graphics.createtextboxflipme("", -1, 12, TEXT_COLOUR("red"));
-        graphics.textboxprintflags(PR_FONT_INTERFACE);
-        graphics.textboxcenterx();
-        graphics.textboxtimer(50);
-        graphics.textboxtranslate(TEXTTRANSLATE_FUNCTION, savetele_textbox_fail);
+        show_save_fail();
     }
     graphics.textboxapplyposition();
 }
@@ -3325,11 +3353,14 @@ void Game::updatestate(void)
             }
         }
 
-
-            if (nodeathmode)
+            if (nodeathmode || nodeatheligible)
             {
                 unlockAchievement("vvvvvvmaster"); //bloody hell
                 unlocknum(UnlockTrophy_NODEATHMODE_COMPLETE);
+            }
+
+            if (nodeathmode)
+            {
                 setstate(3520);
                 setstatedelay(0);
             }
@@ -4949,6 +4980,10 @@ void Game::deserializesettings(tinyxml2::XMLElement* dataNode, struct ScreenSett
             roomname_translator::set_enabled(help.Int(pText));
         }
 
+        if (SDL_strcmp(pKey, "checkpoint_saving") == 0)
+        {
+            checkpoint_saving = help.Int(pText);
+        }
     }
 
     setdefaultcontrollerbuttons();
@@ -5207,6 +5242,8 @@ void Game::serializesettings(tinyxml2::XMLElement* dataNode, const struct Screen
     xml::update_tag(dataNode, "english_sprites", (int) loc::english_sprites);
     xml::update_tag(dataNode, "new_level_font", loc::new_level_font.c_str());
     xml::update_tag(dataNode, "roomname_translator", (int) roomname_translator::enabled);
+
+    xml::update_tag(dataNode, "checkpoint_saving", (int) checkpoint_saving);
 }
 
 static bool settings_loaded = false;
@@ -5906,6 +5943,10 @@ void Game::customloadquick(const std::string& savfile)
         {
             map.customshowmm = help.Int(pText);
         }
+        else if (SDL_strcmp(pKey, "mapreveal") == 0)
+        {
+            map.revealmap = help.Int(pText);
+        }
         else if (SDL_strcmp(pKey, "disabletemporaryaudiopause") == 0)
         {
             disabletemporaryaudiopause = help.Int(pText);
@@ -6344,6 +6385,8 @@ bool Game::customsavequick(const std::string& savfile)
     xml::update_tag(msgs, "hardestroom_finalstretch", (int) hardestroom_finalstretch);
 
     xml::update_tag(msgs, "showminimap", (int) map.customshowmm);
+
+    xml::update_tag(msgs, "mapreveal", (int) map.revealmap);
 
     xml::update_tag(msgs, "disabletemporaryaudiopause", (int) disabletemporaryaudiopause);
 
@@ -6865,6 +6908,7 @@ void Game::createmenu( enum Menu::MenuName t, bool samemenu/*= false*/ )
         option(loc::gettext("unfocus pause"));
         option(loc::gettext("unfocus audio pause"));
         option(loc::gettext("room name background"));
+        option(loc::gettext("checkpoint saving"));
         option(loc::gettext("return"));
         menuyoff = 0;
         maxspacing = 15;
@@ -7781,6 +7825,11 @@ void Game::returntoingame(void)
         }
     }
     DEFER_CALLBACK(nextbgcolor);
+
+    if (nocompetitive())
+    {
+        invalidate_ndm_trophy();
+    }
 }
 
 void Game::unlockAchievement(const char* name)
@@ -7833,8 +7882,22 @@ void Game::copyndmresults(void)
     SDL_memcpy(ndmresultcrewstats, crewstats, sizeof(ndmresultcrewstats));
 }
 
-static inline int get_framerate(const int slowdown)
+void Game::invalidate_ndm_trophy(void)
 {
+    if (nodeatheligible)
+    {
+        vlog_debug("NDM trophy is invalidated!");
+    }
+    nodeatheligible = false;
+}
+
+static inline int get_framerate(const int slowdown, const int deathseq)
+{
+    if (deathseq != -1)
+    {
+        return 34;
+    }
+
     switch (slowdown)
     {
     case 30:
@@ -7863,7 +7926,7 @@ int Game::get_timestep(void)
     switch (gamestate)
     {
     case GAMEMODE:
-        return get_framerate(slowdown);
+        return get_framerate(slowdown, deathseq);
     default:
         return 34;
     }

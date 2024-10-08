@@ -1206,6 +1206,8 @@ void scriptclass::run(void)
                 {
                     game.savedir = obj.entities[i].dir;
                 }
+
+                game.checkpoint_save();
             }
             else if (words[0] == "gamestate")
             {
@@ -1328,6 +1330,28 @@ void scriptclass::run(void)
                 map.setexplored(19, 7, false);
                 map.setexplored(19, 8, false);
             }
+            else if (words[0] == "mapexplored")
+            {
+                if (words[1] == "none")
+                {
+                    map.resetmap();
+                }
+                else if (words[1] == "all")
+                {
+                    map.fullmap();
+                }
+            }
+            else if (words[0] == "mapreveal")
+            {
+                if (words[1] == "on")
+                {
+                    map.revealmap = true;
+                }
+                else if (words[1] == "off")
+                {
+                    map.revealmap = false;
+                }
+            }
             else if (words[0] == "showteleporters")
             {
                 map.showteleporters = true;
@@ -1413,7 +1437,7 @@ void scriptclass::run(void)
             {
                 game.unlocknum(Unlock_SECRETLAB);
                 game.insecretlab = true;
-                SDL_memset(map.explored, true, sizeof(map.explored));
+                map.fullmap();
             }
             else if (words[0] == "leavesecretlab")
             {
@@ -2651,6 +2675,16 @@ void scriptclass::startgamemode(const enum StartMode mode)
             graphics.showcutscenebars = true;
             graphics.setbars(320);
             load("intro");
+
+            if (!game.nocompetitive())
+            {
+                game.nodeatheligible = true;
+                vlog_debug("NDM trophy is eligible.");
+            }
+            else
+            {
+                game.invalidate_ndm_trophy();
+            }
         }
         break;
 
@@ -2734,7 +2768,7 @@ void scriptclass::startgamemode(const enum StartMode mode)
         {
             game.timetrialcountdown = 0;
             game.timetrialparlost = true;
-            SDL_memset(map.explored, true, sizeof(map.explored));
+            map.fullmap();
         }
 
         graphics.fademode = FADE_NONE;
@@ -2744,9 +2778,9 @@ void scriptclass::startgamemode(const enum StartMode mode)
         game.startspecial(0);
 
         /* Unlock the entire map */
-        SDL_memset(obj.collect, true, sizeof(obj.collect[0]) * 20);
+        map.fullmap();
         /* Give all 20 trinkets */
-        SDL_memset(map.explored, true, sizeof(map.explored));
+        SDL_memset(obj.collect, true, sizeof(obj.collect[0]) * 20);
         i = 400; /* previously a nested for-loop set this */
         game.insecretlab = true;
         map.showteleporters = true;
@@ -2840,6 +2874,7 @@ void scriptclass::startgamemode(const enum StartMode mode)
         map.custommode = true;
         map.custommodeforreal = false;
         map.customshowmm = true;
+        map.revealmap = true;
 
         if (cl.levmusic > 0)
         {
@@ -2866,6 +2901,7 @@ void scriptclass::startgamemode(const enum StartMode mode)
         cl.findstartpoint();
 
         map.customshowmm = true;
+        map.revealmap = true;
 
         music.fadeout();
         game.customstart();
@@ -3110,6 +3146,7 @@ void scriptclass::hardreset(void)
 
     game.nodeathmode = false;
     game.nocutscenes = false;
+    game.nodeatheligible = false;
 
     for (i = 0; i < (int) SDL_arraysize(game.crewstats); i++)
     {
@@ -3237,7 +3274,8 @@ void scriptclass::hardreset(void)
     map.cameraseekframe = 0;
     map.resumedelay = 0;
     graphics.towerbg.scrolldir = 0;
-    map.customshowmm=true;
+    map.customshowmm = true;
+    map.revealmap = true;
 
     SDL_memset(map.roomdeaths, 0, sizeof(map.roomdeaths));
     SDL_memset(map.roomdeathsfinal, 0, sizeof(map.roomdeathsfinal));
