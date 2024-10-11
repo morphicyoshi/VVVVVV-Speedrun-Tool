@@ -10,6 +10,8 @@ Discussion about VVVVVV updates mainly happens on the "unofficial" [VVVVVV disco
 
 Speedrun Tool
 -------
+[Setup Guide](https://www.youtube.com/watch?v=cL3TTpOlxsM)
+
 **Features**
 - Lock Checkpoints, prevents checkpoints from being activated in time trial
 - Checkpoint Switcher, switch between checkpoints in a time trial (doesn't work in The Tower)
